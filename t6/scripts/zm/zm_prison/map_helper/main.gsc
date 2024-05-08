@@ -47,7 +47,7 @@ onplayerconnect()
 onplayerspawned()
 {
     self endon("disconnect");
-	level endon("end_game");
+    level endon("end_game");
     self.icons = [];
     self.iconsEnabled = false;
     counter = 0;

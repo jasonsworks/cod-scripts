@@ -79,6 +79,7 @@ checkPieces()
     }
     t_pulley_hurt_trigger = getent( "pulley_hurt_trigger_" + keyLocation, "targetname" );
     self.craftIcons[counter+1] = self thread createIcon(self, t_pulley_hurt_trigger, "waypoint_kill_red");
+    self.craftIcons[counter+1].alpha = 0;
 }
 
 checkSkulls()

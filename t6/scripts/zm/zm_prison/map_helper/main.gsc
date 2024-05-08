@@ -29,8 +29,6 @@ newCreateIcon(player, enemy)
     hud_elem.hidewheninmenu = 1;
     hud_elem thread final_showdown_update_icon( enemy );
 
-    // Original function doesn't return hud_elem for some reason
-    // Needed to edit alpha for toggling visibility
     return hud_elem;
 }
 

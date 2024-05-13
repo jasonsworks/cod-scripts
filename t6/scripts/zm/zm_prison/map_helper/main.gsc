@@ -71,12 +71,12 @@ checkBottles()
 
 newEggWait(bottle_origin)
 {
-    temp_ent = spawn( "script_origin", bottle_origin );
-    temp_ent playloopsound( "zmb_meteor_loop" );
-    temp_ent thread maps\mp\zombies\_zm_sidequests::fake_use( "main_music_egg_hit", ::sndmusicegg_override );
-    temp_ent waittill( "main_music_egg_hit", player );
+    temp_ent = spawn("script_origin", bottle_origin);
+    temp_ent playloopsound("zmb_meteor_loop");
+    temp_ent thread maps\mp\zombies\_zm_sidequests::fake_use("main_music_egg_hit", ::sndmusicegg_override);
+    temp_ent waittill("main_music_egg_hit", player);
     temp_ent stoploopsound( 1 );
-    player playsound( "zmb_meteor_activate" );
+    player playsound("zmb_meteor_activate");
     counter = 0;
     foreach (bottlesOrigin in player.bottlesOrigins)
     {
@@ -88,10 +88,10 @@ newEggWait(bottle_origin)
     }
     level.meteor_counter = level.meteor_counter + 1;
 
-    if ( level.meteor_counter == 3 )
+    if (level.meteor_counter == 3)
     {
-        level thread sndmuseggplay( temp_ent, "mus_zmb_secret_song", 170 );
-        level thread easter_egg_song_vo( player );
+        level thread sndmuseggplay(temp_ent, "mus_zmb_secret_song", 170);
+        level thread easter_egg_song_vo(player);
     }
     else
     {
@@ -173,9 +173,7 @@ skullTracker(grenade, n_grenade_charge_power)
             return true;
         }
     }
-
     return false;
-    
 }
 
 newPickup(player)
@@ -281,7 +279,6 @@ iconsController()
       foreach(icon in self.bottlesIcons)
         icon.alpha = self.bottlesIconsEnabled;
     }
-
     wait 0.05;
   }
 }

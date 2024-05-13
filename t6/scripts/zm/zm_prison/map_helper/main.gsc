@@ -254,29 +254,29 @@ iconsController()
   level endon("end_game");
   level endon("game_ended");
 
-  for(;;)
+  for (;;)
   {
-    if(self actionslottwobuttonpressed())
+    if (self actionslottwobuttonpressed())
     {
       self.craftIconsEnabled = !self.craftIconsEnabled;
 
-      foreach(icon in self.craftIcons)
+      foreach (icon in self.craftIcons)
         icon.alpha = self.craftIconsEnabled;
     }
 
-    if(self actionslotthreebuttonpressed())
+    if (self actionslotthreebuttonpressed())
     {
       self.macguffinsIconsEnabled = !self.macguffinsIconsEnabled;
 
-      foreach(icon in self.macguffinsIcons)
+      foreach (icon in self.macguffinsIcons)
         icon.alpha = self.macguffinsIconsEnabled;
     }
 
-    if(self actionslotfourbuttonpressed())
+    if (self actionslotfourbuttonpressed())
     {
       self.bottlesIconsEnabled = !self.bottlesIconsEnabled;
 
-      foreach(icon in self.bottlesIcons)
+      foreach (icon in self.bottlesIcons)
         icon.alpha = self.bottlesIconsEnabled;
     }
     wait 0.05;
